@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = 
-OBJECTS = main.o chunk.o memory.o debug.o value.o
+OBJECTS = main.o chunk.o memory.o debug.o value.o vm.o
 BINARY = clox
 
 run: $(BINARY)
