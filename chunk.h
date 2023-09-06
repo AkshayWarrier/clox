@@ -11,6 +11,7 @@ typedef enum {
 
 typedef struct {
     int count;
+    int lines_ix;
     int capacity;
     uint8_t* code;
     int* lines;
@@ -21,5 +22,6 @@ void initChunk(Chunk* chunk);
 void freeChunk(Chunk* chunk);
 void writeChunk(Chunk* chunk, uint8_t byte, int line);
 int addConstant(Chunk* chunk, Value value);
+int getLine(Chunk* chunk, int offset);
 
 #endif

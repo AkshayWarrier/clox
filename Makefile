@@ -3,6 +3,9 @@ CFLAGS =
 OBJECTS = main.o chunk.o memory.o debug.o value.o
 BINARY = clox
 
+run: $(BINARY)
+	./$(BINARY)
+
 all: $(BINARY)
 
 $(BINARY): $(OBJECTS)
@@ -19,3 +22,4 @@ $(BINARY): $(OBJECTS)
 
 clean:
 	rm -f $(BINARY) *.o
+
