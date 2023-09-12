@@ -1,6 +1,8 @@
 CC = gcc
 CFLAGS = 
-OBJECTS = main.o chunk.o memory.o debug.o value.o vm.o
+FILES = main chunk memory debug value vm compiler scanner
+OBJECTS = $(patsubst %,%.o,$(FILES))
+HEADERS = $(patsubst %,%.h,$(FILES))
 BINARY = clox
 
 run: $(BINARY)
@@ -10,6 +12,7 @@ all: $(BINARY)
 
 $(BINARY): $(OBJECTS)
 	$(CC) -o clox $(OBJECTS)
+
 
 # %.o: %.c
 #	$(CC) $(CFLAGS) -c -o $@ $^
