@@ -4,8 +4,12 @@
 #include "common.h"
 #include "value.h"
 
-typedef enum {
+typedef enum
+{
     OP_CONSTANT,
+    OP_NIL,
+    OP_TRUE,
+    OP_FALSE,
     OP_ADD,
     OP_SUBTRACT,
     OP_MULTIPLY,
@@ -14,19 +18,20 @@ typedef enum {
     OP_RETURN
 } OpCode;
 
-typedef struct {
+typedef struct
+{
     int count;
     int lines_ix;
     int capacity;
-    uint8_t* code;
-    int* lines;
+    uint8_t *code;
+    int *lines;
     ValueArray constants;
 } Chunk;
 
-void initChunk(Chunk* chunk);
-void freeChunk(Chunk* chunk);
-void writeChunk(Chunk* chunk, uint8_t byte, int line);
-int addConstant(Chunk* chunk, Value value);
-int getLine(Chunk* chunk, int offset);
+void initChunk(Chunk *chunk);
+void freeChunk(Chunk *chunk);
+void writeChunk(Chunk *chunk, uint8_t byte, int line);
+int addConstant(Chunk *chunk, Value value);
+int getLine(Chunk *chunk, int offset);
 
 #endif
