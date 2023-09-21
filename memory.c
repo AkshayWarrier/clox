@@ -14,7 +14,7 @@ void *reallocate(void *pointer, size_t oldSize, size_t newSize)
 
     void *result = realloc(pointer, newSize);
     // Initialize result to 0s
-    memset(result + oldSize, 0, newSize - oldSize);
+    // memset(result + oldSize, NULL, newSize - oldSize);
     if (result == NULL)
         exit(1);
     return result;

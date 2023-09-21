@@ -15,7 +15,15 @@
     "optional": "c",
     "format": "c",
     "ratio": "c",
-    "system_error": "c"
+    "system_error": "c",
+    "table.h": "c"
   },
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "makefile.launchConfigurations": [
+    {
+      "cwd": "/home/akshay/Files/Projects/clox",
+      "binaryPath": "/home/akshay/Files/Projects/clox/clox",
+      "binaryArgs": []
+    }
+  ]
 }

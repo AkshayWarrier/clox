@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = 
-FILES = main chunk memory debug value vm compiler scanner object
+FILES = main chunk memory debug value vm compiler scanner object table
 OBJECTS = $(patsubst %,%.o,$(FILES))
 HEADERS = $(patsubst %,%.h,$(FILES))
 BINARY = clox
