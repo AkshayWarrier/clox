@@ -16,7 +16,8 @@
     "format": "c",
     "ratio": "c",
     "system_error": "c",
-    "table.h": "c"
+    "table.h": "c",
+    "memory_resource": "c"
   },
   "C_Cpp.errorSquiggles": "disabled",
   "makefile.launchConfigurations": [
